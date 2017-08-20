@@ -1,0 +1,92 @@
+<div class="row">
+     <div class="col-xs-10 col-xs-offset-1">
+         <div class="thumbnail">
+             <h4 class="text-info text-center">Processo de instalação do Docker</h4>
+                <img  id="imagem1" class="img-responsive "src="/../blog/public/img/docker.png" alt="Docker"/>
+                     <div class="caption">
+                         <p>Docker é uma plataforma Open Source escrito em Go, 
+                            que facilita a criação e administração de ambientes isolados.
+                            Com Docker, você pode ter diversas versões da mesma biblioteca 
+                            rodando sem conflito, pode trabalhar em outros projetos sem 
+                            comprometer os recursos da máquina e sem a necessidade de 
+                            levantar uma Máquina Virtual inteira somente para isso, 
+                            e versionar a configuração necessária para certa aplicação rodar.</p>
+                     
+                         <h3>Como funciona?</h3>
+
+                         <p>O Docker possibilita o empacotamento de uma aplicação ou até mesmo 
+                            um ambiente inteiro dentro de um container, e a partir desse momento 
+                            o ambiente inteiro torna-se portável para qualquer outro Host que contenha 
+                            o Docker instalado.</p>
+
+                         <h3> Container vs Máquina virtual</h3>
+
+                         <p>Ambos possuem recursos similares de isolamento e alocação – mas uma abordagem 
+                            arquitetônica diferente permite que os containers sejam mais portáteis e eficientes.</p>
+
+                         <p>Máquina virtual: incluem o aplicativo, bibliotecas necessárias e todo um sistema 
+                            operacional – todos os quais podem chegar a dezenas de GBs.</p>
+
+                         <P>Container: incluem o aplicativo e todas as suas dependências – mas compartilham o 
+                            kernel com outros containers, executando como processos isolados no espaço do 
+                            usuário no sistema operacional do host. Os containers de Docker não estão ligados 
+                            a nenhuma infra-estrutura específica: funcionam em qualquer computador, em qualquer 
+                            infra-estrutura e em qualquer nuvem.</p>
+
+                         <p>Na imagem abaixo, vemos como funciona as máquinas virtuais. Além da Infraestrutura 
+                            e do Sistema Operacional da máquina principal, temos o Hypervisor, o controlador 
+                            do processo de virtualização, encima do Hypervisor temos um Sistema Operacional 
+                            completo rodando. O que resulta em, grande consumo de memória.</p><br>
+                            <img class="img-responsive" src="/../blog/public/img/docker-vm.jpg"/>
+
+                         <p> Na próxima imagem, já podemos observar como funciona o Docker. 
+                             O que muda é a Docker Engine, que ao invés de instalar o SO completo,
+                             permite a criação de diversos containers.</p><br>
+                             <img class="img-responsive" src="/../blog/public/img/docker-containers.jpg"/>
+
+                         <h3>Instalação</h3>
+                         <h4>1. Ubuntu</h4><br>
+                        
+                         <p>Atualize o apt</p>
+                         <p class="well"> $ sudo apt-get update</p>
+
+                         <p>Instale o docker</p>
+                         <p class="well">$ sudo apt-get install docker-engine</p>
+
+                         <p>Inicialize o docker</p>
+                         <p class="well">$ sudo service docker start</p>
+
+                         <p>Verifique se está tudo ok com sua instalação rodando a seguinte imagem</p>
+                         <p class="well">$ sudo docker run hello-world</p><br>
+
+                         <h4>2. Windows</h4><br>
+
+                         <p>Basta seguir este <a href="https://docs.docker.com/docker-for-windows/" target="blank">tutorial.</a></p><br>
+
+                         <h4>3. Mac</h4><br>
+
+                         <p>Basta seguir este <a href="https://docs.docker.com/docker-for-mac/" target="blank">tutorial.</a></p><br>
+
+                         <h4>4. Arch</h4><br>
+                         <p>Você precisa ter instalado os seguintes pacotes:</p>
+
+                         <p>&#9642 bridge-utils</p>
+                         <p>&#9642 device-mapper</p>
+                         <p>&#9642 iproute2</p>
+                         <p>&#9642 sqlite</p><br>
+                         <p> Tudo que você precisa, é do comando a seguir:</p>
+
+                         <p class="well">$ sudo pacman -S docker</p>
+
+                         <p>Para o pacote AUR execute:</p>
+                         <p class="well">$ yaourt -S docker-git</p>
+
+                         <p>Para inicializar o docker, execute:</p>
+                         <p class="well">$ sudo systemctl start docker</p>
+
+                         <p>Para mais informações sobre instalação, acesse o 
+                         <a href="https://docs.docker.com/engine/installation/" target="blank">link.</a></p>
+                     </div>
+         </div>
+     </div>
+</div>

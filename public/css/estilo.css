@@ -1,0 +1,21 @@
+body{
+    background: #eee
+}
+#imagem1{
+    width: 100%;
+}
+.thumbnail{
+    height: 460px;
+    display: table;
+}
+a:link, a:visited{
+    text-decoration: none;
+}
+.nav .navbar-nav>.active>a,
+.nav .navbar-nav>.active>a:hover,
+.nav .navbar-nav>.active>a:focus {
+   color: #5387AD;
+   background-color: #F5F5F5;
+}
+
+    
